@@ -47,6 +47,16 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :test do
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+  gem 'rails-controller-testing', '1.0.2'
+  gem 'minitest-reporters',       '1.1.14'
+  gem 'guard',                    '2.13.0'
+  gem 'guard-minitest',           '2.4.4'
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
