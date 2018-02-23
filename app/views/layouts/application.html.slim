@@ -3,10 +3,13 @@ html
   head
     title
       => full_title(yield(:title))
+    = render 'layouts/rails_default'
 
-    = csrf_meta_tags
-    = stylesheet_link_tag    'application', :media => 'all', 'data-turbolinks-track' => 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+
+    = render 'layouts/shim'
 
   body
-    = yield
+    = render 'layouts/header'
+    .container
+      = yield
+      = render 'layouts/footer'
