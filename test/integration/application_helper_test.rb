@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ApplicationHelperTest < ActionView::TestCase
   test "full title helper" do
-    assert_equal full_title,         "Survey"
-    assert_equal full_title("Help"), "Help | Survey"
+    assert_equal full_title,         "Hartl"
+    assert_equal full_title("Help"), "Help | Hartl"
   end
 end
